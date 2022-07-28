@@ -1,0 +1,4 @@
+2022-07-15 16:42:47,582  INFO [main] RunManager:25 - Hey! TG1791, Logging everything from here ....
+2022-07-15 16:42:47,587  INFO [main] RunManager:26 - Run ID is --> Run-Auto-15-07-2022-04-42-47
+2022-07-15 16:42:48,144 ERROR [main] Test:64 - Failed to generate report 
+java.lang.NullPointerException

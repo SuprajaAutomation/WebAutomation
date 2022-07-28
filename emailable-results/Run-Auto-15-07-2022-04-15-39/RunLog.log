@@ -1,0 +1,4 @@
+2022-07-15 16:15:39,175  INFO [main] RunManager:25 - Hey! TG1791, Logging everything from here ....
+2022-07-15 16:15:39,180  INFO [main] RunManager:26 - Run ID is --> Run-Auto-15-07-2022-04-15-39
+2022-07-15 16:15:39,466  INFO [main] StepsBase:16 - Executing S C E N A R I O : TSB001_Validation of Manage clients tab for BRM user
+2022-07-15 16:15:58,765  INFO [main] Type:41 - Type the value [SubhaBrm] into element [onlineBanking.backoffice.login.username]

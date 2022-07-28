@@ -1,0 +1,7 @@
+2022-07-15 17:18:47,952  INFO [main] RunManager:25 - Hey! TG1791, Logging everything from here ....
+2022-07-15 17:18:47,957  INFO [main] RunManager:26 - Run ID is --> Run-Auto-15-07-2022-05-18-47
+2022-07-15 17:18:48,293  INFO [main] StepsBase:16 - Executing S C E N A R I O : Timesheetfill
+2022-07-15 17:18:52,649 ERROR [main] StepsBase:24 - S C E N A R I O    F A I L E D !!!!!
+2022-07-15 17:18:52,649  INFO [main] Screenshot:22 - Capture screenshot
+2022-07-15 17:18:52,873  INFO [main] Screenshot:28 - Captured!
+2022-07-15 17:18:53,807  INFO [main] Test:61 - Report is generated @ emailable-results\Run-Auto-15-07-2022-05-18-47/Automation-Dashboard.html

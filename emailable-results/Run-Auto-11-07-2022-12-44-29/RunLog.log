@@ -1,0 +1,6 @@
+2022-07-11 12:44:29,641  INFO [main] RunManager:25 - Hey! TG1791, Logging everything from here ....
+2022-07-11 12:44:29,647  INFO [main] RunManager:26 - Run ID is --> Run-Auto-11-07-2022-12-44-29
+2022-07-11 12:44:29,846  INFO [main] StepsBase:16 - Executing S C E N A R I O : Timesheetfill
+2022-07-11 12:44:50,705 ERROR [main] StepsBase:24 - S C E N A R I O    F A I L E D !!!!!
+2022-07-11 12:44:50,719 ERROR [main] Test:64 - Failed to generate report 
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "base.Keywords.driver" is null

@@ -1,0 +1,26 @@
+2022-07-15 16:50:21,589  INFO [main] RunManager:25 - Hey! TG1791, Logging everything from here ....
+2022-07-15 16:50:21,592  INFO [main] RunManager:26 - Run ID is --> Run-Auto-15-07-2022-04-50-21
+2022-07-15 16:50:21,850  INFO [main] StepsBase:16 - Executing S C E N A R I O : Timesheetfill
+2022-07-15 16:50:27,678  INFO [main] Type:41 - Type the value [lakshminarayanan.radhakrishnan@expleogroup.com] into element [Timesheet.login.textboxUsername]
+2022-07-15 16:50:27,998  INFO [main] Type:48 - Type Successful!
+2022-07-15 16:50:29,012  INFO [main] Type:41 - Type the value [Smart#99] into element [Timesheet.login.textboxPassword]
+2022-07-15 16:50:29,238  INFO [main] Type:48 - Type Successful!
+2022-07-15 16:50:30,250  INFO [main] Click:39 - Click element [Timesheet.login.btnSignup]
+2022-07-15 16:50:30,250  INFO [main] Screenshot:22 - Capture screenshot
+2022-07-15 16:50:30,613  INFO [main] Screenshot:28 - Captured!
+2022-07-15 16:50:33,787  INFO [main] Click:50 - Click Successful!
+2022-07-15 16:50:39,614  INFO [main] StepsBase:16 - Executing S C E N A R I O : Filltimesheet
+2022-07-15 16:50:44,752  INFO [main] Click:39 - Click element [Timesheetentry.login.dropdown]
+2022-07-15 16:50:44,752  INFO [main] Screenshot:22 - Capture screenshot
+2022-07-15 16:50:45,080  INFO [main] Screenshot:28 - Captured!
+2022-07-15 16:51:19,562 ERROR [main] StepsBase:24 - S C E N A R I O    F A I L E D !!!!!
+2022-07-15 16:51:19,563  INFO [main] Screenshot:22 - Capture screenshot
+2022-07-15 16:51:31,733  WARN [main] Screenshot:30 - Problem while capturing the screenshot
+chrome not reachable
+  (Session info: chrome=103.0.5060.114)
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'ESLLAP-2640', ip: '192.168.125.130', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_332'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\TG1791\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59454}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b081f6bb5ca7764a71f3309083332f5e
+2022-07-15 16:51:32,509  INFO [main] Test:61 - Report is generated @ emailable-results\Run-Auto-15-07-2022-04-50-21/Automation-Dashboard.html

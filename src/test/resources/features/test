@@ -1,0 +1,839 @@
+#Author: Gopinath Rajaram
+#Functionality: Fund Transfer to OWN Account
+#Manual Scenario Description : Transfer to OWN account - Transfer To page
+#JIRA ID: <Not defined>
+#Jira URL: <Not defined>
+@FundTransfer @OwnAccount
+#Feature: Fund Transfer to OWN Account
+#
+##  #Scenario1
+#  @Android
+#  Scenario: Validation of not allowing own account transfer with one source account
+#    Given I'm on "User" Send_Request page if customer have one account
+#    Then I should not see "Own Account" link in the "Send/Request" page
+#
+# #Scenario2
+#
+#  @Android
+#  Scenario: Validation of allowing own account transfer with mutilple source account
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "350.29"
+#    When I click on "TRANSFER PHP 350.29" button in Own Account review and transfer page
+#    Then I should see a "One-Time Password" page to enter OTP during Own account transfer scenario
+#    When I enter Valid OTP "Account1_OTP" for Own account transfer scenario
+#    Then I should see "Transfer Successful" screen for Own account transfer scenario
+
+    #Scenario3
+
+#  @Android
+#  Scenario: Validation of navigating to transfer clicking the cancel button for own account transfer
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "310.56"
+#    When I click on close button in the Own account Review and Transfer page
+#    Then I should see a "Cancel Transfer" pop-up window with "NO" and "CANCEL TRANSFER" button during own account fund transfer
+#    When I click on CANCEL TRANSFER button to cancel own account fund transfer
+#    Then I should navigate back to "Send/Request" page from Own Account review and transfer page
+
+    #Scenario12
+
+#  Scenario: Validation of navigating to send/Request page on clicking back button in Transfer from and Transfer to screen
+#     Given I'm on "Own Account" Fund "Transfer from?" page to send funds from OWN account
+#     When I click on back button in Own account fund Transfer from? page
+#     When I'm navigate to  "OWN_Source_Account" Fund "Transfer to?" page from Own Account Transfer from?
+#     When I click on back button in Own account fund Transfer to? page
+#     Then I should navigate back to Own Account "Transfer from?" page from Transfer to? page
+
+#  #Scenario13
+
+#   Scenario: Validation of navigating to Transfer to screen on clicking back button from Transfer details screen
+#    Given I'm on "Own Account" Fund "Transfer details" after choosing "OWN_Source_Account" and "OWN_Recipient_Account"
+#    When I click on back button in Own account fund Transfer details page
+#    Then I should navigate back to the "Transfer to?" page from Own Account Transfer details page
+
+   #Scenario15
+
+
+#  @Android
+#  Scenario: Validation of  Edit functionality in the Review page in Own Account
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "250.56"
+#    When I click Edit link present in the From account section of Own Account review and transfer page
+#    Then I should see Own Account "Transfer from?" page with an option to change source account
+#    When I choose "OWN_Another_Source_Account" from the list in Own Account page
+#    Then I should see Own Account "Review and Transfer" page with updated source account
+#    When I click Edit link present in the To account section of Own Account review and transfer page
+#    Then I should see Own Account "Transfer to?" page with an option to change recipient account
+#    When I change the recipient account to "OWN_Another_Source_two_Account" in Own Account transfer to? page
+#    When I click Edit link present in the Amount section of Own Account review and transfer page
+#    Then I should see Own Account "Transfer details" page with option to change transfer amount details
+#    When I change the transfer amount to PHP "852.35" in Own Account transfer details page
+#    Then I should see Own Account "Review and Transfer" page with updated transfer account
+
+#   #Scenario48
+#
+#  Scenario: Validation of entering remarks greater than 256 characters in own transfer
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter remark message with text "greater_than_256_characters" in own account transfer detail page
+#    Then I should see the remark message with only 256 characters in own account transfer detail page
+#
+##   #Scenario67
+#   Scenario: Validation of navigating to Transfer details page once transfer from account is selected if user has only two accounts for own transfer
+#     Given I'am on "Send/Request" page of union bank mobile application for user having two accounts
+#     When I click on "Own Account" fund transfer option from the Send/Request page
+#     And choose the "OWN_Source_user2_Account" from the list of source accounts in Transfer from? page
+#     Then I should see "Transfer details" page
+#     When I enter transaction amount "15" PHP in amount field in Own Account fund transfer details page
+#     And click next button in Own Account fund transfer details page
+#     When I click on "TRANSFER PHP 15.00" button in Own Account review and transfer page
+#     Then I should see a "One-Time Password" page to enter OTP during Own account transfer scenario
+#     When I enter Valid OTP "Account1_OTP" for Own account transfer scenario
+#     Then I should see "Transfer Successful" screen for Own account transfer scenario
+
+#
+#  #S.No 107 ~ ~ ~
+#  @Android
+#  Scenario: Validation of editing to account in review and transfer screen
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "250.56"
+#    When I click Edit link present in the To account section of Own Account review and transfer page
+#    Then I should see Own Account "Transfer to?" page with an option to change recipient account
+#    When I change the recipient account to "Another_Recipient_Account" in Own Account transfer to? page
+#    Then I should see Own Account "Review and Transfer" page with updated recipient account
+#
+#  #S.No 108 ~ ~ ~
+#  @Android
+#  Scenario: Validation of editing amount in review and transfer screen
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "250.56"
+#    When I click Edit link present in the Amount section of Own Account review and transfer page
+#    Then I should see Own Account "Transfer details" page with option to change transfer amount details
+#    When I change the transfer amount to PHP "852.35" in Own Account transfer details page
+#    Then I should see Own Account "Review and Transfer" page with updated transfer account
+#
+
+
+#  #S.No 83 ~ ~ ~
+#  @Android
+#  Scenario: Validation of selecting source account in transfer from screen
+#    Given I'am on "Send/Request" page of union bank mobile application
+#    When I click on "Own Account" fund transfer option from the Send/Request page
+#    And choose the "OWN_Source_Account" from the list of source accounts in Transfer from? page
+#    Then I should see "Transfer to?" page with facility to choose transfer to account details
+#
+#  #S.No 86 ~ ~ ~
+#  @Android
+#  Scenario: Validation of selecting target account in transfer to screen
+#    Given I'am on "Send/Request" page of union bank mobile application
+#    When I click on "Own Account" fund transfer option from the Send/Request page
+#    And choose the "OWN_Source_Account" and "OWN_Recipient_Account" from the list of availabel accounts
+#    Then I should see "Transfer details" page
+#
+#  #S.No 89 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering non-numeric characters in amount field
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    And I try to enter non-numeric characters "test@#$$" in amount field of "Transfer details" page
+#    Then the application should not allow to user to keyin the non-numeric characters in amount field section
+#
+#  #S.No 81 ~ ~ ~
+#  @Android
+#  Scenario: Validation of not allowing the user to transfer with one source account (Own account link should be hidden in Send/Request page)
+#    Given I'm on the landing page of union bank with "Account2_UserID" and "Account2_Password"
+#    When I choose Send/Request tab from the footer section
+#    Then I should not see "Own Account" link in the "Send/Request" page
+#
+#  #S.No 82 ~ ~ ~
+#  @Android
+#  Scenario: Validation of allowing the user to transfer with multiple source account (Own account link should be displayed in Send/Request page)
+#    Given I'm on the landing page of union bank mobile application
+#    When I choose Send/Request tab from the footer section
+#    Then I should see a "Own Account" link in the "Send/Request" page
+#
+#  #S.No 90 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering amount more than account balance
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter an amount PHP "456789003423434444" greater than the account balance in amount field
+#    Then I should see an error message "Amount is greater than your current balance" below the amount field
+#
+#  ####################
+#  #S.No 91 ~ ~ ~
+#  @Android @test99
+#  Scenario: Validation of entering previous date in date field
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I click on trasanction date with an amount PHP "250.65" in the own account transfer details page
+#    Then I should see a date picker for choosing the transaction date with the past date in disable mode
+#
+#  #####################
+#  #S.No 92 ~ ~ ~
+#  @Android @test99
+#  Scenario: Validation of entering future date in date field
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I click on trasanction date with an amount PHP "250.65" in the own account transfer details page
+#    Then I should see a date picker for choosing the transaction date with present and future dates are in enable mode
+#    When I choose future date as "October 25 2018"
+#    And Click "OK" button in the datepicker of own account fund transfer details page
+#    Then The selected date "October 25 2018" should be displayed in the transaction date field in the own account fund transfer details page
+#
+#  #S.No 93 ~ ~ ~
+#  @Android
+#  Scenario: Validation of enabling the repeat toggle button
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "1250" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    Then I should see a option to provide "Select Frequency*" and "Select End Repeat (Never)" functionality in Own Account fund transfer details page
+#
+#  #S.No 94 ~ ~ ~
+#  @Android
+#  Scenario: Validation of proceeding to next page without selecting frequency
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "950" PHP in amount field in Own Account fund transfer details page
+#    And Not choosing any freqency interval from the Repeat section
+#    Then The Next button should be in disabled mode
+#
+#  #S.No 95 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as Daily for scheduled fund transfer
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "250" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    And I choose "Daily" as a repeat option from select frequency in Own Account fund transfer details page
+#    And click next button in Own Account fund transfer details page
+#    Then I should see Own Account "Review and Transfer" page
+#
+#  #S.No 96 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as weekly for scheduled fund transfer
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "350" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    And I choose "Weekly" as a repeat option from select frequency in Own Account fund transfer details page
+#    And click next button in Own Account fund transfer details page
+#    Then I should see Own Account "Review and Transfer" page
+#
+#  #S.No 97 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as Every 2 weeks for scheduled fund transfer
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "450" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    And I choose "Every 2 Weeks" as a repeat option from select frequency in Own Account fund transfer details page
+#    And click next button in Own Account fund transfer details page
+#    Then I should see Own Account "Review and Transfer" page
+#
+#  #S.No 98 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as Monthly for scheduled fund transfer
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "550" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    And I choose "Monthly" as a repeat option from select frequency in Own Account fund transfer details page
+#    And click next button in Own Account fund transfer details page
+#    Then I should see Own Account "Review and Transfer" page
+#
+#  #S.No 99 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as quarterly for scheduled fund transfer
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "650" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    And I choose "Quarterly" as a repeat option from select frequency in Own Account fund transfer details page
+#    And click next button in Own Account fund transfer details page
+#    Then I should see Own Account "Review and Transfer" page
+#
+#  #S.No 100 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as semi-annually for scheduled fund transfer
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "750" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    And I choose "Semi-Annually" as a repeat option from select frequency in Own Account fund transfer details page
+#    And click next button in Own Account fund transfer details page
+#    Then I should see Own Account "Review and Transfer" page
+#
+#  #S.No 101 ~ ~ ~
+#  @Android @test5
+#  Scenario: Validation of setting frequency as annually for scheduled fund transfer
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "850" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    And I choose "Annually" as a repeat option from select frequency in Own Account fund transfer details page
+#    And click next button in Own Account fund transfer details page
+#    Then I should see Own Account "Review and Transfer" page
+#
+#  ######################################
+#  #######################################
+#  #S.No 102 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering remarks less than 256 characters
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter remark message with text "less_than_256_characters" in own account transfer detail page
+#    Then I should see the entered remark message in own account transfer detail page
+#
+#  #S.No 103 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering remarks equal to 256 characters
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter remark message with text "equal_to_256_characters" in own account transfer detail page
+#    Then I should see the entered remark message with only 256 characters in own account transfer detail page
+#
+#  #S.No 104 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering remarks greater than 256 characters
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter remark message with text "greater_than_256_characters" in own account transfer detail page
+#    Then I should see the remark message with only 256 characters in own account transfer detail page
+#
+#  #S.No 105 ~ ~ ~
+#  @Android
+#  Scenario: Validation of review and transfer screen
+#    Given I'm on "Own Account" Fund Transfer from? page
+#    When I choose "OWN_Source_Account" and "OWN_Recipient_Account" informations
+#    Then Own Account "Transfer details" page should be displayed
+#    When I enter transaction amount "850.00" PHP in amount field in Own Account fund transfer details page
+#    And Turn on the repeat toggle button
+#    And I choose "Annually" as a repeat option from select frequency in Own Account fund transfer details page
+#    And I enter remark message as "test review qa" in Own Account detail page
+#    And click next button in Own Account fund transfer details page
+#    Then I should see Own Account "Review and Transfer" page with "From account","To account",transaction "Amount","Date","Repeat","End Repeat" and remark "Message" details
+#
+#  #S.No 106 ~ ~ ~
+#  @Android
+#  Scenario: Validation of editing from account in review and transfer screen
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "250.56"
+#    When I click Edit link present in the From account section of Own Account review and transfer page
+#    Then I should see Own Account "Transfer from?" page with an option to change source account
+#    When I choose "Another_Source_Account" from the list in Own Account page
+#    Then I should see Own Account "Review and Transfer" page with updated source account
+#
+#  #S.No 107 ~ ~ ~
+#  @Android
+#  Scenario: Validation of editing to account in review and transfer screen
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "250.56"
+#    When I click Edit link present in the To account section of Own Account review and transfer page
+#    Then I should see Own Account "Transfer to?" page with an option to change recipient account
+#    When I change the recipient account to "Another_Recipient_Account" in Own Account transfer to? page
+#    Then I should see Own Account "Review and Transfer" page with updated recipient account
+#
+#  #S.No 108 ~ ~ ~
+#  @Android
+#  Scenario: Validation of editing amount in review and transfer screen
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "250.56"
+#    When I click Edit link present in the Amount section of Own Account review and transfer page
+#    Then I should see Own Account "Transfer details" page with option to change transfer amount details
+#    When I change the transfer amount to PHP "852.35" in Own Account transfer details page
+#    Then I should see Own Account "Review and Transfer" page with updated transfer account
+#
+#  #S.No 109 ~ ~ ~
+#  @Android
+#  Scenario: Validation of OTP screen
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "350.28"
+#    When I click on "TRANSFER PHP 350.28" button in Own Account review and transfer page
+#    Then I should see a "One-Time Password" page to enter OTP during Own account transfer scenario
+#    When I enter Valid OTP "Account1_OTP" for Own account transfer scenario
+#    Then I should see "Transfer Successful" screen for Own account transfer scenario
+#
+#  #S.No 110 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering invalid OTP
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "360.28"
+#    When I click on "TRANSFER PHP 360.28" button in Own Account review and transfer page
+#    Then I should see a "One-Time Password" page to enter OTP during Own account transfer scenario
+#    When I enter invalid OTP "Account1_INVALID_OTP" for Own account transfer scenario
+#    Then I should see a pop-up with an error message "You entered an invalid OTP. Please try again." for Own account transfer scenario
+#
+#  #S.No 111 ~ ~ ~
+#  @Android @test11
+#  Scenario: Validation of transaction history in transfer success page
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account",amount as PHP "350.28",frequency as "Daily" and remark as "test qa own account"
+#    When I click on "TRANSFER PHP 350.28" button in Own Account review and transfer page
+#    Then I should see a "One-Time Password" page to enter OTP during Own account transfer scenario
+#    When I enter Valid OTP "Account1_OTP" for Own account transfer scenario
+#    Then I should see "Transfer Successful" screen with my transaction details for Own account transfer scenario
+#
+#  #S.No 112 ~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to send/Request page on clicking back button in Transfer from screen
+#    Given I'm on "Own Account" Fund "Transfer from?" page to send funds from OWN account
+#    When I click on back button in Own account fund Transfer from? page
+#    Then I should navigate back to the "Send/Request" page from Own Account Transfer from? page
+#
+#  ##### steps then is not executinggg
+#  #S.No 113 ~ ~ ~
+#  @Android @test10
+#  Scenario: Validation of navigating to Transfer from screen on clicking back button in transfer to screen
+#    Given I'm on "Own Account" Fund "Transfer to?" page after choosing "OWN_Source_Account"
+#    When I click on back button in Own account fund Transfer to? page
+#    Then I should navigate back to Own Account "Transfer from?" page from Transfer to? page
+#
+#  #S.No 114 ~ ~ ~
+#  @Android @test10
+#  Scenario: Validation of navigating to Transfer to screen on clicking back button from Transfer details screen
+#    Given I'm on "Own Account" Fund "Transfer details" after choosing "OWN_Source_Account" and "OWN_Recipient_Account"
+#    When I click on back button in Own account fund Transfer details page
+#    Then I should navigate back to the "Transfer to?" page from Own Account Transfer details page
+#
+#  #S.No 115 ~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to Review and Transfer screen on clicking next button in Transfer details screen
+#    Given I'm on "Own Account" Fund "Transfer details" after choosing "OWN_Source_Account" and "OWN_Recipient_Account"
+#    When I click on next button with an amount of PHP "126.32" in the Own Account "Transfer details" page
+#    Then I should see Own Account "Review and Transfer" page
+#
+#  #S.No 116 ~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to Send/Request page on clicking cancel button from Review and Transfer screen
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "310.56"
+#    When I click on close button in the Own account Review and Transfer page
+#    Then I should see a "Cancel Transfer" pop-up window with "NO" and "CANCEL TRANSFER" button during own account fund transfer
+#    When I click on CANCEL TRANSFER button to cancel own account fund transfer
+#    Then I should navigate back to "Send/Request" page from Own Account review and transfer page
+#
+#  #S.No 117 ~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to OTP page on clicking transfer button in review screen
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account" and an amount PHP "366.56"
+#    When I click on "TRANSFER PHP 366.56" button in Own Account review and transfer page
+#    Then I should see a "One-Time Password" page with facility to enter OTP, "RECEIVE CODE VIA SMS/CALL" button and back button during fund tranfer from Own account
+#
+#  ####need login with only two accounts
+#  ##S.No 118 ~ ~ ~
+#  @Android @test10
+#  Scenario: Validation of navigating to Transfer details page once transfer from account is selected if user has only two accounts
+#    Given I'am on "Send/Request" page of union bank mobile application
+#    When I click on "Own Account" fund transfer option from the Send/Request page
+#    And choose the "OWN_Source_Account" from the list of source accounts in Transfer from? page
+#    Then I should see "Transfer details" page
+#
+#  #S.No 119 ~ ~ ~
+#  @Android @test11
+#  Scenario: Validation of navigating to Dashboard on clicking dashboard button in transfer success page
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account",amount as PHP "776.39",frequency as "Daily" and remark as "sanity own account"
+#    When I click on "TRANSFER PHP 776.39" button in Own Account review and transfer page
+#    Then I should see a "One-Time Password" page to enter OTP during Own account transfer scenario
+#    When I enter Valid OTP "Account1_OTP" for Own account transfer scenario
+#    Then I should see "Transfer Successful" screen with my transaction details for Own account transfer scenario
+#    When I click on "GO TO DASHBOARD" button in the Own account fund Transfer Successful page
+#    Then I should see "Dashboard" page of union bank navigated from Own account transfer Successful page
+#
+#  #S.No 120 ~ ~ ~
+#  @Android @test11
+#  Scenario: Validation of navigating to Send/Request page on clicking new transaction button in transfer success page
+#    Given I'm on "Own Account" "Review and Transfer" page with the "OWN_Source_Account","OWN_Recipient_Account",amount as PHP "776.39",frequency as "Daily" and remark as "sanity own account"
+#    When I click on "TRANSFER PHP 776.39" button in Own Account review and transfer page
+#    Then I should see a "One-Time Password" page to enter OTP during Own account transfer scenario
+#    When I enter Valid OTP "Account1_OTP" for Own account transfer scenario
+#    Then I should see "Transfer Successful" screen with my transaction details for Own account transfer scenario
+#    When I click on "NEW TRANSACTION" button in the Own account fund Transfer Successful screen
+#    Then I should see "Send/Request" page for initiating a new fund transfer
+
+
+
+  #TESTINGGITTTT
+###EON Account
+
+
+
+#  #S.No 1 ~ ~ ~
+#  @Android
+#  Scenario: Validation of Fund Transfer to EON account link in Send/Request page
+#    Given I'm on the landing page of union bank mobile application
+#    When I choose Send/Request tab from the footer section
+#    Then I should see "EON Account" link in the Send/Request page
+#
+#  #S.No 2 ~ ~ ~
+#  @Android
+#  Scenario: Validation of selecting source account in transfer from screen
+#    Given I'm on "EON Account" Transfer from? page
+#    When I choose source account from the list of availabel transfer from accounts
+#    Then I should see "Transfer to?" page with facility to enter recipients account number
+#
+#  #S.No 161 ~ ~ ~
+#  @Android @hold
+#  Scenario: Validation of fund transfer from source account as dormant account
+#  Given I'm on "EON Account" Transfer from? page
+#  When I choose "dormant_source_account" from the source accounts list
+#  ######
+#
+#  #S.No 162 ~ ~ ~
+#  @Android @hold
+#  Scenario: Validation of fund transfer from source account as inactive account
+#  ##########
+#
+#  #S.No 13 ~ ~ ~
+#  @Android
+#   Scenario: Validation of entering another UBP valid account number
+#    Given I'm on "EON Account" Transfer from? page
+#    When I choose source account from the list of availabel transfer from accounts
+#    And I enter valid ubp "Recipent_AccountNo" in the Transfer To? page
+#    Then on sucessfull account validation the button NEXT should be enabled
+#
+#  #S.No 14 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering another UBP invalid account number
+#    Given I'm on "EON Account" Transfer from? page
+#    When I choose source account from the list of availabel transfer from accounts
+#    And I enter invalid ubp "InvalidRecipent_AccountNo" in the Transfer To? page
+#    Then on account validation the button NEXT should not be enabled
+#
+#  Scenario: Validation of copy pasting alphanumeric characters in account field
+#
+#
+#
+#  #S.No 15 ~ ~ ~
+#  @Android
+#  Scenario: Validation of selecting target account number from saved recipient
+#    Given I'm on "EON Account" Transfer from? page
+#    When I choose source account from the list of availabel transfer from accounts
+#    And I choose recipient account from the select My recipient list
+#    Then on sucessfull account validation the button NEXT should be enabled
+#
+#  #S.No 16 ~ ~ ~
+#  @Android
+#  Scenario: Validation of selecting target account number from saved favourite recipient
+#    Given I'm on "EON Account" Transfer from? page
+#    When I choose source account from the list of availabel transfer from accounts
+#    And I choose recipient account from the favourite recipient list
+#    Then on sucessfull account validation the button NEXT should be enabled
+#
+#  #S.No 17 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering non-numeric characters in amount field
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    Then "Transfer details" page should be displayed
+#    When I try to enter non-numeric characters "test@#$$" in amount field
+#    Then the application should not allow to user to keyin the non-numeric characters in amount field
+#
+#  #S.No 164 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering amount more than account balance
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    Then "Transfer details" page should be displayed
+#    When I enter transaction amount PHP "456789003423434444" greater than the account balance in amount field
+#    Then I should see an error message "Amount is greater than your current balance"
+##S.No 165 ~ ~ ~
+#  @Android @test89
+#  Scenario: Validation of entering previous date in date field
+#   Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    Then "Transfer details" page should be displayed
+#    When I click on trasanction date with an amount PHP "150.65" in the eon account transfer details page
+#    Then I should see a date picker for choosing the transaction date with the past date in disable mode for eon account fund transfer
+#
+##S.No 166 ~ ~ ~
+#  @Android @test89
+#  Scenario: Validation of entering future date in date field
+#   Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    Then "Transfer details" page should be displayed
+#  	When I click on trasanction date with an amount PHP "250.65" in the eon account transfer details page
+#    Then I should see a date picker for choosing the transaction date with present and future dates are in enable mode for eon account fund transfer
+#    When I choose future date as "November 25 2018" for eon account fund transfer
+#    And Click "OK" button in the datepicker of eon account fund transfer details page
+#    Then The selected date "November 25 2018" should be displayed in the transaction date field in the eon account fund transfer details page
+#
+#
+#  #S.No 167 ~ ~ ~
+#  @Android
+#  Scenario: Validation of enabling the repeat toggle button
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    Then "Transfer details" page should be displayed
+#    When I enter transaction amount "1250" PHP in amount field
+#    And Turn on repeat toggle button
+#    Then I should see a option to provide "Select Frequency*" and "Select End Repeat (Never)" functionality
+#
+#  #S.No 168 ~ ~ ~
+#  @Android
+#  Scenario: Validation of proceeding to next page without selecting frequency
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    Then "Transfer details" page should be displayed
+#    When I enter transaction amount "3250" PHP in amount field
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#
+#  #S.No 169 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as Daily for scheduled fund transfer
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "1250" PHP in amount field
+#    And I choose "Daily" as a repeat option from select frequency
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#
+#  #S.No 170 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as weekly for scheduled fund transfer
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "1350" PHP in amount field
+#    And I choose "Weekly" as a repeat option from select frequency
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#
+#  #S.No 171 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as Every 2 weeks for scheduled fund transfer
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "1450" PHP in amount field
+#    And I choose "Every 2 Weeks" as a repeat option from select frequency
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#
+#  #S.No 172 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as Monthly for scheduled fund transfer
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "1550" PHP in amount field
+#    And I choose "Monthly" as a repeat option from select frequency
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#
+#  #S.No 173 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as quarterly for scheduled fund transfer
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "1650" PHP in amount field
+#    And I choose "Quarterly" as a repeat option from select frequency
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#
+#  #S.No 174 ~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as semi-annually for scheduled fund transfer
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "1750" PHP in amount field
+#    And I choose "Semi-Annually" as a repeat option from select frequency
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#
+#  #S.No 175~ ~ ~
+#  @Android
+#  Scenario: Validation of setting frequency as annually for scheduled fund transfer
+#    Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "1850" PHP in amount field
+#    And I choose "Annually" as a repeat option from select frequency
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#
+#  #S.No 176 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering remarks less than 256 characters
+#    Given I'm on "EON Account" Transfer details page with the "Source_Account" and "Recipient_Account"
+#    When I enter remark message with text "less_than_256_characters"
+#    Then I should see the entered remark message in the message text area
+#
+#  #S.No 177 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering remarks equal to 256 characters
+#    Given I'm on "EON Account" Transfer details page with the "Source_Account" and "Recipient_Account"
+#    When I enter remark message with text "equal_to_256_characters"
+#    Then I should see the entered remark message with only 256 characters in the message text area
+#
+#  #S.No 178 ~ ~ ~
+#  @Android
+#  Scenario: Validation of entering remarks greater than 256 characters
+#    Given I'm on "EON Account" Transfer details page with the "Source_Account" and "Recipient_Account"
+#    When I enter remark message with text "greater_than_256_characters"
+#    Then I should see the remark message with only 256 characters in the message text area
+#
+#  #S.No 179 ~ ~ ~
+#  @Android
+#  Scenario: Validation of review and transfer screen
+#    Given I'm on "EON Account" Transfer details page with the "Source_Account" and "Recipient_Account"
+#    When I enter transaction amount "995.21" PHP in amount field
+#    And I choose "Annually" as a repeat option from select frequency
+#    And I enter remark message as "testremarktransferfund"
+#    And click next button
+#    Then I should see a "Review and Transfer" page with "From account","To account",transaction "Amount","Date","Repeat","End Repeat" and remark "Message" details
+#
+#  #S.No 180~ ~ ~
+#  @Android
+#  Scenario: Validation of editing from account in review and transfer screen
+#    Given I'm on "EON Account" "Review and Transfer" page with the "Source_Account","Recipient_Account" and amount PHP "250.56"
+#    When I click Edit link present in the From account section
+#    Then I should see "Transfer from?" page with option to change source account
+#    When I choose "Another_Source_Account" from the list
+#    Then I should see "Review and Transfer" page with updated source account
+#
+#  #S.No 181~ ~ ~
+#  @Android @test4
+#  Scenario: Validation of editing to account in review and transfer screen
+#    Given I'm on "EON Account" "Review and Transfer" page with the "Source_Account","Recipient_Account" and amount PHP "350.56"
+#    When I click Edit link present in the To account section
+#    Then I should see "Transfer to?" page with option to change recipient account
+#    When I change the recipient account to "Another_Recipient_Account"
+#    Then I should see "Review and Transfer" page with updated recipient account
+#
+#  #S.No 182~ ~ ~
+#  @Android
+#  Scenario: Validation of editing amount in review and transfer screen
+#    Given I'm on "EON Account" "Review and Transfer" page with the "Source_Account","Recipient_Account" and amount PHP "350.56"
+#    When I click Edit link present in the Amount section
+#    Then I should see "Transfer details" page with option to change transfer amount details
+#    When I change the transfer amount to PHP "852.35"
+#    Then I should see "Review and Transfer" page with updated transfer account
+#
+#  #S.No 183~ ~ ~
+#  @Android @test
+#  Scenario: Validation of OTP screen
+#    Given I'm on "EON Account" "Review and Transfer" page with the "Source_Account","Recipient_Account" and amount PHP "450.56"
+#    When I click on "TRANSFER PHP 450.56" button
+#    Then I should see a "One-Time Password" page with facility to enter OTP
+#    When I enter Valid OTP "Account1_OTP"
+#    Then I should see "Transfer Successful" screen
+#
+#  #S.No 184~ ~ ~
+#  @Android @test
+#  Scenario: Validation of entering invalid OTP
+#    Given I'm on "EON Account" "Review and Transfer" page with the "Source_Account","Recipient_Account" and amount PHP "650.56"
+#    When I click on "TRANSFER PHP 650.56" button
+#    Then I should see a "One-Time Password" page with facility to enter OTP
+#    When I enter invalid OTP "Account1_INVALID_OTP"
+#    Then I should see a pop-up with error message "You entered an invalid OTP. Please try again."
+#
+#  #S.No 185~ ~ ~
+#  @Android
+#  Scenario: Validation of transaction history in transfer success page
+#    Given I'm on "EON Account" "Review and Transfer" page with the "Source_Account","Recipient_Account" and amount PHP "650.56"
+#    When I click on "TRANSFER PHP 650.56" button
+#    Then I should see a "One-Time Password" page with facility to enter OTP
+#    When I enter Valid OTP "Account1_OTP"
+#    Then I should see "Transfer Successful" screen with my transaction details
+#
+#  #S.No 186~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to send/Request page on clicking back button in Transfer from screen
+#      Given I'm on "EON Account" "Transfer from?" page
+#    When I click on back button in Transfer from? page
+#    Then I should navigate back to "Send/Request" page
+#
+#  #S.No 187~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to Transfer from screen on clicking back button in transfer to screen
+#  Given I'm on "EON Account" "Transfer to?" page after choosing source account details
+#    When I click on back button in Transfer to? page
+#    Then I should navigate back to "Transfer from?" page from Transfer to? page
+#
+#  #S.No 188~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to Transfer to screen on clicking back button from Transfer details screen
+#  Given I'm on "EON Account" "Transfer details" page after providing source and recipient account details
+#    When I click on back button in Transfer details page
+#    Then I should navigate back to "Transfer to?" page Transfer details page
+#
+#  #S.No 189~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to Review and Transfer screen on clicking next button in Transfer details screen
+#    Given I'm on "EON Account" Transfer details page with the "Source_Account" and "Recipient_Account"
+#    When I click on next button with an amount of PHP "256.32" in the "Transfer details" page
+#    Then I should see a "Review and Transfer" page
+#
+#
+#   #S.No 190~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to Send/Request page on clicking cancel button from Review and Transfer screen
+# 		Given I'm on "EON Account" "Review and Transfer" page with the "Source_Account","Recipient_Account" and amount PHP "420.56"
+#    When I click on close button in the Review and Transfer page
+#    Then I should see a "Cancel Transfer" pop-up window with "NO" and "CANCEL TRANSFER" button
+#    When I click on CANCEL TRANSFER button
+#    Then I should navigate back to "Send/Request" page
+#
+# #S.No 191~ ~ ~
+#  @Android
+#  Scenario: Validation of navigating to OTP page on clicking transfer button in review screen
+#   Given I'm on "EON Account" "Review and Transfer" page with the "Source_Account","Recipient_Account" and amount PHP "250.56"
+#    When I click on "TRANSFER PHP 250.56" button
+#    Then I should see a "One-Time Password" page with facility to enter OTP, "RECEIVE CODE VIA SMS/CALL" button and back button
+#
+#  ##### need to add step for checking in recent transaction
+#
+#  #S.No 192~ ~ ~
+#  @Android @test8
+#  Scenario: Validation of navigating to Dashboard on clicking dashboard button in transfer success page
+# 	Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "750.56" PHP in amount field
+#    And I choose "Daily" as a repeat option from select frequency
+#    And I enter remark message as "testremarktransferfund"
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#    When I click on "TRANSFER PHP 750.56" button
+#    Then I should see a "One-Time Password" page with facility to enter OTP
+#    When I enter Valid OTP "Account1_OTP"
+#    Then I should see "Transfer Successful" screen with my transaction details
+#    When I click on GO TO DASHBOARD button in Transfer Successful page
+#    Then I should see "Dashboard" page of union bank
+#
+#    ##### need to add step for checking in recent transaction
+#
+#  #S.No 193~ ~ ~
+#  @Android @test8
+#  Scenario: Validation of navigating to Send/Request page on clicking new transaction button in transfer success page
+#	Given I'm on "EON Account" Transfer from? page
+#    When I enter "Source_Account" and "Recipient_Account" information
+#    And click next button
+#    When I enter transaction amount "650.56" PHP in amount field
+#    And I choose "Daily" as a repeat option from select frequency
+#    And I enter remark message as "testremarktransferfund"
+#    And click next button
+#    Then I should see a "Review and Transfer" page
+#    When I click on "TRANSFER PHP 650.56" button
+#    Then I should see a "One-Time Password" page with facility to enter OTP
+#    When I enter Valid OTP "Account1_OTP"
+#    Then I should see "Transfer Successful" screen with my transaction details
+#    When I click on NEW TRANSACTION button in Transfer Successful page
+#    Then I should see "Send/Request" page for initiating a new transaction
+#
+#

@@ -1,0 +1,16 @@
+2022-07-15 17:19:19,660  INFO [main] RunManager:25 - Hey! TG1791, Logging everything from here ....
+2022-07-15 17:19:19,665  INFO [main] RunManager:26 - Run ID is --> Run-Auto-15-07-2022-05-19-19
+2022-07-15 17:19:19,969  INFO [main] StepsBase:16 - Executing S C E N A R I O : Timesheetfill
+2022-07-15 17:19:26,309  INFO [main] Type:41 - Type the value [lakshminarayanan.radhakrishnan@expleogroup.com] into element [Timesheet.login.textboxUsername]
+2022-07-15 17:19:26,640  INFO [main] Type:48 - Type Successful!
+2022-07-15 17:19:27,643  INFO [main] Type:41 - Type the value [Smart#99] into element [Timesheet.login.textboxPassword]
+2022-07-15 17:19:27,850  INFO [main] Type:48 - Type Successful!
+2022-07-15 17:19:28,851  INFO [main] Click:39 - Click element [Timesheet.login.btnSignup]
+2022-07-15 17:19:28,852  INFO [main] Screenshot:22 - Capture screenshot
+2022-07-15 17:19:29,233  INFO [main] Screenshot:28 - Captured!
+2022-07-15 17:19:32,250  INFO [main] Click:50 - Click Successful!
+2022-07-15 17:19:38,273  INFO [main] JSClick:20 - Click element [Timesheetentry.login.dropdown]
+2022-07-15 17:19:38,273  INFO [main] Screenshot:22 - Capture screenshot
+2022-07-15 17:19:38,473  INFO [main] Screenshot:28 - Captured!
+2022-07-15 17:19:40,241  INFO [main] JSClick:26 - Click Successful!
+2022-07-15 17:20:01,174  INFO [main] Test:61 - Report is generated @ emailable-results\Run-Auto-15-07-2022-05-19-19/Automation-Dashboard.html

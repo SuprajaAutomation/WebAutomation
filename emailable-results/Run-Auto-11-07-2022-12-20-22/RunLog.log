@@ -1,0 +1,4 @@
+2022-07-11 12:20:22,700  INFO [main] RunManager:25 - Hey! TG1791, Logging everything from here ....
+2022-07-11 12:20:22,705  INFO [main] RunManager:26 - Run ID is --> Run-Auto-11-07-2022-12-20-22
+2022-07-11 12:20:23,057 ERROR [main] Test:64 - Failed to generate report 
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "base.Keywords.driver" is null

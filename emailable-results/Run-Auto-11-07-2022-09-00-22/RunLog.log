@@ -1,0 +1,4 @@
+2022-07-11 21:00:22,841  INFO [main] RunManager:25 - Hey! TG1791, Logging everything from here ....
+2022-07-11 21:00:22,846  INFO [main] RunManager:26 - Run ID is --> Run-Auto-11-07-2022-09-00-22
+2022-07-11 21:00:23,015  INFO [main] StepsBase:16 - Executing S C E N A R I O : FirstTimesheetfill
+2022-07-11 21:00:29,693  INFO [main] Test:61 - Report is generated @ emailable-results\Run-Auto-11-07-2022-09-00-22/Automation-Dashboard.html
